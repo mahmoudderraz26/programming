@@ -1,0 +1,51 @@
+h2{
+    font-family: Tajawal;
+    font-size: 24pt;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    gap: 10px;
+}
+
+.inputs input{
+    font-family: Tajawal;
+    font-size: 16pt;
+    text-align: center;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.button button{
+    font-family: Tajawal;
+    font-size: 20pt;
+    text-align: center;
+    width: 200px;
+    background-color: #5271ff;
+    color: #ffffff;
+    border-radius: 5px;
+
+}
+
+h3{
+    color: #5271ff;
+}
+
+#result {
+    text-align: center;
+    font-size: 18pt;
+    transition: all 0.3s ease;
+}

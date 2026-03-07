@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar">
+	<head>
+		<title>حساب المعدل</title>
+		<meta charset="UTF-8">
+		<link rel="icon" type="image/x-icon" href="">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h2>برنامج حساب المعدل</h2>
+		<br><br>
+		<div class="inputs">
+		<input type="number" id="arabic" placeholder="اللغة العربية" min="0" max="20" required>
+		<input type="number" id="islamic" placeholder="التربية الإسلامية" min="0" max="20" required>
+		<input type="number" id="hisgeo" placeholder="الإجتماعيات" min="0" max="20" required>
+		<input type="number" id="english" placeholder="الإنجليزية" min="0" max="20" required>
+		<input type="number" id="french" placeholder="الفرنسية" min="0" max="20" required>
+		<input type="number" id="math" placeholder="الرياضيات" min="0" max="20" required>
+		<input type="number" id="physic" placeholder="الفيزياء" min="0" max="20" required>
+		<input type="number" id="svt" placeholder="علوم الحياة والأرض" min="0" max="20" required>
+		<input type="number" id="philosophy" placeholder="الفلسفة" min="0" max="20" required>
+		</div>
+		<br><br>
+		<div class="button">
+		<button onclick="calculer()">حساب المعدل</button>
+		</div>
+		<h3 id="result"></h3>
+		<script src="script.js"></script>
+	</body>
+</html>
