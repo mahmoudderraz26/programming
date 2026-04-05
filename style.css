@@ -18,7 +18,7 @@
 }
 
 body {
-	margin: 0;
+  margin: 0;
 }
 
 h1 {
@@ -321,34 +321,34 @@ footer {
 }
 
 .calculator-body {
-	height: 90vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .calculator {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 500px;
 }
 
 #display {
-	width: 700px;
-	margin: 10px;
-	padding: 10px;
+  width: 700px;
+  margin: 10px;
+  padding: 10px;
   height: 60px;
   direction: ltr;
   font-size: 50px;
 }
 
 .buttons {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
 }
 
 button {
@@ -361,21 +361,33 @@ button {
 }
 
 button:hover {
-	background-color:#d3d3d3;
+  background-color: #d3d3d3;
 }
 
 .operator {
-  background-color: #FCB62E;
+  background-color: #fcb62e;
   color: #ffffff;
   font-size: 60px;
 }
 
 .equals {
-	grid-row: span 2;
-	background-color: #5271ff;
-	color: white;
+  grid-row: span 2;
+  background-color: #5271ff;
+  color: white;
 }
 
 #zero {
-	grid-column: span 2;
+  grid-column: span 2;
+}
+
+.delete-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ededed;
+}
+
+.delete-btn img {
+  width: 100%;
+  height: auto;
 }
