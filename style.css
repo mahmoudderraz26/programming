@@ -391,3 +391,39 @@ button:hover {
   width: 100%;
   height: auto;
 }
+
+table th {
+  direction: rtl;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  text-align: center;
+  border: #000000;
+  background-color: #5271ff;
+  color: #ffffff;
+  border-collapse: collapse;
+  width: auto;
+  table-layout: auto;
+  padding: 5px;
+  font-size: 16pt;
+}
+
+table td {
+  direction: rtl;
+  font-family: "Tajawal", sans-serif;
+  text-align: center;
+  border: #000000;
+  color: #000000;
+  border-collapse: collapse;
+  width: auto;
+  table-layout: auto;
+  padding: 5px;
+  font-size: 14pt;
+}
+
+table tr:nth-child(even) {
+  background-color: #ededed;
+}
+
+table tr:hover {
+  background-color: #b4c2ff;
+  corsor: pointer;
+}
