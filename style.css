@@ -352,8 +352,8 @@ footer {
 }
 
 button {
-  padding: 10px;
-  font-size: 60px;
+  padding: 15px;
+  font-size: 50px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -367,6 +367,7 @@ button:hover {
 .operator {
   background-color: #FCB62E;
   color: #ffffff;
+  font-size: 60px;
 }
 
 .equals {
@@ -375,6 +376,6 @@ button:hover {
 	color: white;
 }
 
-.zero {
+#zero {
 	grid-column: span 2;
 }
