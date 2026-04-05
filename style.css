@@ -1,20 +1,20 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 50px;
-	background-color: #5271ff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #5271ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
@@ -22,252 +22,359 @@ body {
 }
 
 h1 {
-	font-family: 'Noto Kufi Arabic', sans-serif;
-	text-align: center;
-	font-size: 24pt;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  text-align: center;
+  font-size: 24pt;
+  color: #5271ff;
 }
 
 .h1-justify {
-	font-family: 'Noto Kufi Arabic', sans-serif;
-	text-align: justify;
-	font-size: 24pt;
-	padding: 0px 50px;
-	color: red;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  text-align: justify;
+  font-size: 24pt;
+  padding: 0px 50px;
+  color: #fcb62e;
 }
 
 h2 {
-	font-family: 'Noto Kufi Arabic', sans-serif;
-	text-align: center;
-	font-size: 20pt;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  text-align: center;
+  font-size: 20pt;
 }
 
 .h2-justify {
-	font-family: 'Noto Kufi Arabic', sans-serif;
-	text-align: justify;
-	font-size: 20pt;
-	padding: 0px 50px;
-	color: green;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  text-align: justify;
+  font-size: 20pt;
+  padding: 0px 50px;
+  color: green;
 }
 
 .h3-justify {
-	font-family: 'Noto Kufi Arabic', sans-serif;
-	text-align: justify;
-	font-size: 16pt;
-	padding: 0px 50px;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  text-align: justify;
+  font-size: 16pt;
+  padding: 0px 50px;
 }
 
 p {
-	font-family: "Tajawal", sans-serif;
-	font-weight: 500;
-	font-style: normal;
-	text-align: center;
-	font-size: 20pt;
-	padding: 0px 50px;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  font-size: 20pt;
+  padding: 0px 50px;
 }
 
 .p-justify {
-	font-family: "Tajawal", sans-serif;
-	font-weight: 500;
-	font-style: normal;
-	text-align: justify;
-	font-size: 16pt;
-	padding: 0px 50px 5px 50px;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: justify;
+  font-size: 16pt;
+  padding: 0px 50px 5px 50px;
+}
+
+.pre-justify {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: justify;
+  font-size: 16pt;
+  padding: 0px 50px 5px 50px;
 }
 
 ul {
-	font-family: "Tajawal", sans-serif;
-	font-weight: 500;
-	font-style: normal;
-	text-align: justify;
-	font-size: 16pt;
-	padding: 0px 90px 0px 0px;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: justify;
+  font-size: 16pt;
+  padding: 0px 90px 0px 0px;
 }
 
 li {
-	font-family: "Tajawal", sans-serif;
-	font-weight: 500;
-	font-style: normal;
-	text-align: justify;
-	font-size: 16pt;
-	padding: 0px 0px 10px 50px;
-	text-indent: 1px;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: justify;
+  font-size: 16pt;
+  padding: 0px 0px 10px 50px;
+  text-indent: 1px;
 }
 
 .code-box {
-	background-color: #ededed;
-	padding: 20px;
-	border-radius: 5px;
-	width: 90%;
-	margin: auto;
-	direction: ltr;
-	text-align: left;
-	margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: auto;
 }
 
 code {
-	font-family: monospace;
-	font-size: 14pt;
+  font-family: monospace;
+  font-size: 14pt;
+  background-color: #ededed;
+  color: gray;
+  padding: 10px;
+  border-radius: 8px;
+  direction: ltr;
 }
 
 .menulogo {
-	display: flex;
-	align-items: center;
-	padding: 1px;
-	margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding: 1px;
+  margin-left: auto;
 }
 
 .menus {
-	display: flex;
-	justify-content: space-evenly;
-	flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
 }
 
-.menus a{
-	color: white;
-	text-decoration: none;
-	font-family: "Tajawal", sans-serif;
+.menus a {
+  color: white;
+  text-decoration: none;
+  font-family: "Tajawal", sans-serif;
 }
 
 #site-logo {
-	height: 30px;
-	width: auto;
-	margin-left: 10px;
+  height: 30px;
+  width: auto;
+  margin-left: 10px;
 }
 
 .menu {
-	position: fixed;
-	top: 50px;
-	width: 200px;
-	right: -250px;
-	height: 100%;
-	background:#eee;
-	box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-	padding-top:60px;
-	transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-	z-index: 999;
-	padding: 20px;
-	font-family: "Tajawal", sans-serif;
+  position: fixed;
+  top: 50px;
+  width: 200px;
+  right: -250px;
+  height: 100%;
+  background: #eee;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  padding-top: 60px;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 999;
+  padding: 20px;
+  font-family: "Tajawal", sans-serif;
 }
 
-.menu-btn{
-	font-size: 20px;
-	background:#5271ff;
-	color:white;
-	border:none;
-	padding:10px 15px;
-	cursor:pointer;
+.menu-btn {
+  font-size: 20px;
+  background: #5271ff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
 }
 
-.menu a{
-  display:block;
-  padding:15px;
-  text-decoration:none;
-  color:#5271ff;
+.menu a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #5271ff;
 }
 
-.menu a:hover{
-  background:#ddd;
+.menu a:hover {
+  background: #ddd;
 }
 
 .menu.open {
-    right: 0px;
+  right: 0px;
 }
 
 .menu-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 30px;
-	border-bottom: 1px solid #eee;
-	padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
 }
 
 #overlay {
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.5);
-	z-index: 998;
-	opacity: 0;
-	display: none;
-	visibility: hidden;
-	transition: 0.3s;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;
+  display: none;
+  visibility: hidden;
+  transition: 0.3s;
 }
 
 .overlay.active {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 #overlay.show {
-    display: block;
+  display: block;
 }
 
 .inputs {
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	justify-content: center;
-	align-items: center;
-	height: 95vh;
-	width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 100%;
 }
 
 input {
-	text-align: center;
-	width: 200px;
-	height: 30px;
-	font-size: 20px;
-	font-family: "Tajawal", sans-serif;
-	border-radius: 5px;
-	border-width: 1px;
+  text-align: center;
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  font-family: "Tajawal", sans-serif;
+  border-radius: 5px;
+  border-width: 1px;
 }
 
 #averageCalculer {
-	background-color: #5271ff;
-	color: white;
-	width: 200px;
-	height: 40px;
-	font-size: 20px;
-	border-radius: 5px;
-	font-family: 'Noto Kufi Arabic', sans-serif;
-	border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5271ff;
+  color: white;
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 5px;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  border: none;
 }
 
 .LearnPlan {
-	width: 100%;
-	height: fit-content;
-	display: flex;
-	gap: 20px;
-	justify-content: center;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
 
 .LearnPlanimg {
-	height: 70px;
-	width: auto;
+  height: 70px;
+  width: auto;
+}
+
+.previous-next {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5px;
+}
+
+.previous {
+  background-color: #5271ff;
+  color: #ffffff;
+  width: auto;
+  height: auto;
+  text-align: center;
+  font-family: "Tajawal", sans-serif;
+  font-size: 20pt;
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.next {
+  background-color: #5271ff;
+  color: #ffffff;
+  width: auto;
+  height: auto;
+  text-align: center;
+  font-family: "Tajawal", sans-serif;
+  font-size: 20pt;
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: none;
 }
 
 footer {
-	bottom: 0;
-	width: 100%;
-	background-color: #5271ff;
-	color: white;
-	font-family: "Tajawal", sans-serif;
+  bottom: 0;
+  width: 100%;
+  background-color: #5271ff;
+  color: white;
+  font-family: "Tajawal", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px 0px 0px;
+}
+
+.BottomFooter {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #5271ff;
+  color: white;
+  font-family: "Tajawal", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator-body {
+	height: 90vh;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-.BottomFooter {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	background-color: #5271ff;
-	color: white;
-	font-family: "Tajawal", sans-serif;
+.calculator {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+  width: 500px;
+}
+
+#display {
+	width: 700px;
+	margin: 10px;
+	padding: 10px;
+  height: 60px;
+  direction: ltr;
+  font-size: 50px;
+}
+
+.buttons {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 5px;
+}
+
+button {
+  padding: 10px;
+  font-size: 60px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+	background-color:#d3d3d3;
+}
+
+.operator {
+  background-color: #FCB62E;
+  color: #ffffff;
+}
+
+.equals {
+	grid-row: span 2;
+	background-color: #5271ff;
+	color: white;
+}
+
+.zero {
+	grid-column: span 2;
 }
