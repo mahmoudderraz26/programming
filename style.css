@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-.header {
+header {
   top: 0;
   right: 0;
   width: 100%;
@@ -24,14 +24,14 @@ body {
 h1 {
   font-family: "Noto Kufi Arabic", sans-serif;
   text-align: center;
-  font-size: 24pt;
+  font-size: 24px;
   color: #5271ff;
 }
 
 .h1-justify {
   font-family: "Noto Kufi Arabic", sans-serif;
   text-align: justify;
-  font-size: 24pt;
+  font-size: 24px;
   padding: 0px 50px;
   color: #fcb62e;
 }
@@ -39,13 +39,13 @@ h1 {
 h2 {
   font-family: "Noto Kufi Arabic", sans-serif;
   text-align: center;
-  font-size: 20pt;
+  font-size: 20px;
 }
 
 .h2-justify {
   font-family: "Noto Kufi Arabic", sans-serif;
   text-align: justify;
-  font-size: 20pt;
+  font-size: 20px;
   padding: 0px 50px;
   color: green;
 }
@@ -53,7 +53,7 @@ h2 {
 .h3-justify {
   font-family: "Noto Kufi Arabic", sans-serif;
   text-align: justify;
-  font-size: 16pt;
+  font-size: 18px;
   padding: 0px 50px;
 }
 
@@ -62,7 +62,7 @@ p {
   font-weight: 500;
   font-style: normal;
   text-align: center;
-  font-size: 20pt;
+  font-size: 16px;
   padding: 0px 50px;
 }
 
@@ -71,7 +71,7 @@ p {
   font-weight: 500;
   font-style: normal;
   text-align: justify;
-  font-size: 16pt;
+  font-size: 16px;
   padding: 0px 50px 5px 50px;
 }
 
@@ -80,7 +80,7 @@ p {
   font-weight: 500;
   font-style: normal;
   text-align: justify;
-  font-size: 16pt;
+  font-size: 16px;
   padding: 0px 50px 5px 50px;
 }
 
@@ -89,7 +89,7 @@ ul {
   font-weight: 500;
   font-style: normal;
   text-align: justify;
-  font-size: 16pt;
+  font-size: 16px;
   padding: 0px 90px 0px 0px;
 }
 
@@ -98,7 +98,7 @@ li {
   font-weight: 500;
   font-style: normal;
   text-align: justify;
-  font-size: 16pt;
+  font-size: 16px;
   padding: 0px 0px 10px 50px;
   text-indent: 1px;
 }
@@ -112,7 +112,7 @@ li {
 
 code {
   font-family: monospace;
-  font-size: 14pt;
+  font-size: 16px;
   background-color: #ededed;
   color: gray;
   padding: 10px;
@@ -234,6 +234,8 @@ input {
   font-family: "Tajawal", sans-serif;
   border-radius: 5px;
   border-width: 1px;
+  transition: background-color 0.3s ease;
+    border: 2px solid #ddd;
 }
 
 #averageCalculer {
@@ -340,7 +342,7 @@ footer {
   width: 700px;
   margin: 10px;
   padding: 10px;
-  height: 60px;
+  height: 80px;
   direction: ltr;
   font-size: 50px;
 }
@@ -427,3 +429,9 @@ table tr:hover {
   background-color: #b4c2ff;
   corsor: pointer;
 }
+
+#grade {
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    border: 2px solid #ddd;
+  }
