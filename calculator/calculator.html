@@ -19,7 +19,7 @@
 </head>
 
 <body>
-	<div class="header">
+	<header>
 		<div class="menulogo">
 			<button id="menu-btn" class="menu-btn" onclick="toggleMenu()">☰</button>
 			<a href="../index.html" target="_blank"><img src="../logos/majarra.svg" alt="site logo" id="site-logo"></a>
@@ -31,7 +31,7 @@
 			<a href="../ResultCalculator/resultcalculator.html" target="_blank">Result Calculator</a>
 			<a href="calculator.html" target="_blank">Calculator</a>
 		</nav>
-	</div>
+	</header>
 	</div>
 	<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
 	<nav id="menu" class="menu">
@@ -44,7 +44,7 @@
 	<div class="calculator-body">
 		<h2>الآلة الحاسبة</h2>
 		<div class="calculator">
-			<input type="text" id="display" disabled>
+			<input type="text" id="display" readonly>
 			<div class="buttons">
 				<button class="delete-btn" onclick="deleteLast()"><img src="../svg/black_delete.svg"
 						alt="delete icon"></button>
