@@ -1,3 +1,6 @@
+/* ===================================================================
+universal selector
+====================================================================== */
 *,
 *::before,
 *::after {
@@ -6,21 +9,26 @@
   padding: 0;
 }
 
+/* ===================================================================
+header
+====================================================================== */
 header {
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 50px;
   background-color: #5271ff;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
+/* ===================================================================
+body
+====================================================================== */
 body {
   margin: 0;
 }
 
+/* ===================================================================
+h
+====================================================================== */
 h1 {
   font-family: "Noto Kufi Arabic", sans-serif;
   text-align: center;
@@ -31,6 +39,14 @@ h1 {
 .h1-justify {
   font-family: "Noto Kufi Arabic", sans-serif;
   text-align: justify;
+  font-size: 24px;
+  padding: 0px 50px;
+  color: #fcb62e;
+}
+
+.h1-center-orange {
+  font-family: "Noto Kufi Arabic", sans-serif;
+  text-align: center;
   font-size: 24px;
   padding: 0px 50px;
   color: #fcb62e;
@@ -57,6 +73,9 @@ h2 {
   padding: 0px 50px;
 }
 
+/* ===================================================================
+p & pre
+====================================================================== */
 p {
   font-family: "Tajawal", sans-serif;
   font-weight: 500;
@@ -75,6 +94,15 @@ p {
   padding: 0px 50px 5px 50px;
 }
 
+.p-center {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  font-size: 20px;
+  padding: 0px 50px 5px 50px;
+}
+
 .pre-justify {
   font-family: "Tajawal", sans-serif;
   font-weight: 500;
@@ -84,6 +112,9 @@ p {
   padding: 0px 50px 5px 50px;
 }
 
+/* ===================================================================
+Lists
+====================================================================== */
 ul {
   font-family: "Tajawal", sans-serif;
   font-weight: 500;
@@ -103,11 +134,16 @@ li {
   text-indent: 1px;
 }
 
+/* ===================================================================
+CODE
+====================================================================== */
 .code-box {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: auto;
+  direction: ltr;
+  font-family: monospace;
 }
 
 code {
@@ -120,6 +156,9 @@ code {
   direction: ltr;
 }
 
+/* ===================================================================
+MENU
+====================================================================== */
 .menulogo {
   display: flex;
   align-items: center;
@@ -129,8 +168,9 @@ code {
 
 .menus {
   display: flex;
-  justify-content: space-evenly;
+  justify-content:center;
   flex: 1;
+  gap: 50px;
 }
 
 .menus a {
@@ -139,34 +179,18 @@ code {
   font-family: "Tajawal", sans-serif;
 }
 
-#site-logo {
-  height: 30px;
-  width: auto;
-  margin-left: 10px;
-}
-
 .menu {
   position: fixed;
   top: 50px;
   width: 200px;
   right: -250px;
   height: 100%;
-  background: #eee;
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  background: #ededed;
   padding-top: 60px;
   transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 999;
   padding: 20px;
   font-family: "Tajawal", sans-serif;
-}
-
-.menu-btn {
-  font-size: 20px;
-  background: #5271ff;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
 }
 
 .menu a {
@@ -177,20 +201,26 @@ code {
 }
 
 .menu a:hover {
-  background: #ddd;
+  background-color: #5271ff;
+  color: #ffffff;
+}
+
+.menu-btn {
+  font-size: 20px;
+  background: #5271ff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.menu-btn:hover {
+  background-color: #b4c2ff;
+  border-radius: 0;
 }
 
 .menu.open {
   right: 0px;
-}
-
-.menu-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 10px;
 }
 
 #overlay {
@@ -208,7 +238,7 @@ code {
 }
 
 .overlay.active {
-  opacity: 1;
+  opacity: 50;
   visibility: visible;
 }
 
@@ -216,6 +246,18 @@ code {
   display: block;
 }
 
+/* ===================================================================
+LOGO SITE
+====================================================================== */
+#site-logo {
+  height: 30px;
+  max-width: 100%;
+  margin-left: 10px;
+}
+
+/* ===================================================================
+INPUTS
+====================================================================== */
 .inputs {
   display: flex;
   flex-direction: column;
@@ -235,9 +277,72 @@ input {
   border-radius: 5px;
   border-width: 1px;
   transition: background-color 0.3s ease;
-    border: 2px solid #ddd;
+  border: 2px solid #ddd;
 }
 
+label {
+  font-family: "Tajawal", sans-serif;
+  cursor: pointer;
+}
+
+.radio-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  padding-left: 40px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 5px;
+  direction: ltr;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.radio-container:hover {
+  background-color: #e9e9e9;
+}
+
+.radio-container .checkmark {
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + span {
+  font-weight: bold;
+  direction: ltr;
+  
+}
+
+.checkmark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1px;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+.radio-container input:checked ~ .checkmark {
+  background-color: #ffffff;
+  border-color: #5271ff;
+  border-width: 5px;
+}
+
+/* ===================================================================
+AVERAGE CALCULER - برنامج حساب المعدل
+====================================================================== */
 #averageCalculer {
   display: inline-flex;
   justify-content: center;
@@ -298,30 +403,6 @@ input {
   text-decoration: none;
 }
 
-footer {
-  bottom: 0;
-  width: 100%;
-  background-color: #5271ff;
-  color: white;
-  font-family: "Tajawal", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0px 0px 0px;
-}
-
-.BottomFooter {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #5271ff;
-  color: white;
-  font-family: "Tajawal", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .calculator-body {
   height: 90vh;
   display: flex;
@@ -335,7 +416,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 500px;
+  width: 90%;
 }
 
 #display {
@@ -394,8 +475,50 @@ button:hover {
   height: auto;
 }
 
+/* ===================================================================
+QUIZ
+====================================================================== */
+.quiz {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#quizResultButton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5271ff;
+  color: white;
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 5px;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  border: none;
+}
+
+#quizResult {
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  border: 2px solid #ddd;
+}
+
+/* ===================================================================
+TABLES - الجداول
+====================================================================== */
+.english-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  direction: ltr;
+}
+
 table th {
-  direction: rtl;
+  direction: ltr;
   font-family: "Noto Kufi Arabic", sans-serif;
   text-align: center;
   border: #000000;
@@ -409,7 +532,7 @@ table th {
 }
 
 table td {
-  direction: rtl;
+  direction: ltr;
   font-family: "Tajawal", sans-serif;
   text-align: center;
   border: #000000;
@@ -430,8 +553,43 @@ table tr:hover {
   corsor: pointer;
 }
 
+td:nth-child(1) {
+  text-align: left;
+}
+
 #grade {
-    transition: background-color 0.3s ease;
-    font-weight: bold;
-    border: 2px solid #ddd;
-  }
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  border: 2px solid #ddd;
+}
+
+/* ===================================================================
+FOOTER - قدم أو أسفل الصفحة
+====================================================================== */
+footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #5271ff;
+  color: white;
+  font-family: "Tajawal", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px 0px 0px;
+}
+
+/* ===================================================================
+BOTTOM FOOTER - أسفل الصفحة التي لا تحتوي على محتوى كثير يكون ثابت في الأسفل
+====================================================================== */
+.BottomFooter {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #5271ff;
+  color: white;
+  font-family: "Tajawal", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px 0px 0px;
+}
