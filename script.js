@@ -79,9 +79,123 @@ function calculer() {
   }
 }
 
+
+
+/* ======================================================
+    Search input & button
+    =================================================== */
+function executeSearch() {
+    const inputField = document.getElementById('searchInput');
+    const query = inputField.value.toLowerCase().trim();
+    
+    // مصفوفة البيانات مع إضافة "وصف قصير" لكل مقال
+    const articles = [
+        { 
+            keywords: ["html", "إتش تي إم إل", "اتش تي ام ال"], 
+            title: "تعرف على html", 
+            url: "https://mahmoudderraz26.github.io/programming/html/html1.html",
+            description: "ابدأ بتعلم html من الألف إلى الياء"
+        },
+        { 
+            keywords: ["css", "ccs", "csc", "تنسيق", "سي اس اس", "سي إس إس"], 
+            title: "أساسيات CSS", 
+            url: "css-basics.html",
+            description: "ابدأ بتعلم css من الألف إلى الياء"
+        },
+        { 
+            keywords: ["javascript", "javascribt", "js", "جافاسكريبت", "جافا سكريبت"], 
+            title: "تعلم الجافاسكريبت", 
+            url: "js-course.html",
+            description: "ابدأ رحلتك في البرمجة الحقيقية وتعلم كيفية إضافة التفاعل لموقعك باستخدام JavaScript..."
+        }
+    ];
+
+    // الحالة الأولى: الحقل فارغ
+    if (query === "") {
+        inputField.value = ""; // مسح أي مسافات
+        inputField.placeholder = "عذرا ! يرجى إدخال كلمة للبحث.";
+        inputField.classList.add("error-placeholder"); // اختيارياً لإضافة لون أحمر
+        return;
+    }
+
+    // البحث عن جميع النتائج المطابقة (وليس نتيجة واحدة فقط)
+    const results = articles.filter(article => 
+        article.keywords.some(keyword => keyword.includes(query)) || 
+        article.title.toLowerCase().includes(query)
+    );
+
+    // الحالة الثانية: لا توجد نتائج
+    if (results.length === 0) {
+        inputField.value = "";
+        inputField.placeholder = "عذرا ! لا يوجد محتوى عن " + query + "، جرب البحث بكلمات أخرى";
+        return;
+    }
+
+    // الحالة الثالثة: وجود نتائج - تخزينها في الذاكرة المؤقتة والذهاب لصفحة النتائج
+    // سنستخدم localStorage لنقل البيانات لصفحة النتائج
+    localStorage.setItem('searchQuery', query);
+    localStorage.setItem('searchResults', JSON.stringify(results));
+    
+    // التوجيه لصفحة نتائج البحث
+    window.location.href = "https://mahmoudderraz26.github.io/programming/html/html1.html";
+}
+
+
+
+
+
+/* ======================================================
+    quiz
+    =================================================== */
+function checkAnswers() {
+    // 1. تعريف الإجابات الصحيحة بناءً على الـ value الموجودة في الـ HTML
+    const correctAnswers = {
+        question1: "Hyper Text Markup Language",
+        question2: "br",
+        question3: "target-blank",
+        question4: "ol",
+        question5: "body {color: black;}",
+        question6: "color",
+        question7: "font-size",
+        question8: "no",
+        question9: "firstAnswerOfQ9",
+        question10: "equal",
+    };
+
+    let score = 0;
+    const totalQuestions = 10;
+    const pointsPerAnswer = 2;
+
+    // 2. الحصول على جميع بيانات النموذج
+    const form = document.getElementById('quizForm');
+    const formData = new FormData(form);
+
+    // 3. حلقة تكرارية للتحقق من الإجابات
+    for (let i = 1; i <= totalQuestions; i++) {
+        const questionName = "question" + i;
+        const userAnswer = formData.get(questionName);
+
+        if (userAnswer === correctAnswers[questionName]) {
+            score += pointsPerAnswer;
+        }
+    }
+
+    // 4. عرض النتيجة في الحقل المخصص
+    const resultField = document.getElementById('quizResult');
+    resultField.value = "نتيجتك هي: " + score + " من " + (totalQuestions * pointsPerAnswer);
+    
+    if (score >= 12) {
+        resultField.style.color = "green";
+    } else {
+        resultField.style.color = "red";
+    }
+}
+
+
+
 /* ======================================================
     Calculator Script
-    ========================================================= */
+    =================================================== */
 
     const display = document.getElementById("display");
 
