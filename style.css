@@ -168,7 +168,7 @@ MENU
 
 .menus {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   flex: 1;
   gap: 50px;
 }
@@ -319,7 +319,6 @@ label {
 input[type="radio"]:checked + span {
   font-weight: bold;
   direction: ltr;
-  
 }
 
 .checkmark {
@@ -354,7 +353,9 @@ search input
 }
 
 #searchInput {
-  font-family: "Tajawal", sans serif;
+  font-family:
+    "Tajawal",
+    sans serif;
   height: 50px;
   width: 80%;
 }
@@ -367,7 +368,7 @@ search input
   color: #ffffff;
   font-family: "Noto Kufi Arabic", sans-serif;
   height: 50px;
-  font-size:large;
+  font-size: large;
 }
 
 #searchButton:hover {
@@ -601,6 +602,21 @@ td:nth-child(1) {
   border: 2px solid #ddd;
 }
 
+.EidContainer {
+  display: flex;
+  justify-content: center;
+}
+
+#EidTable {
+  width: 40%;
+}
+#EidTable td {
+  background-color: #fcb62e;
+  color: #ffffff;
+  direction: rtl;
+  text-align: center;
+}
+
 /* ===================================================================
 FOOTER - قدم أو أسفل الصفحة
 ====================================================================== */
@@ -630,4 +646,30 @@ BOTTOM FOOTER - أسفل الصفحة التي لا تحتوي على محتوى
   justify-content: center;
   align-items: center;
   margin: 10px 0px 0px 0px;
+}
+
+@media (max-width: 768px) {
+  .menus {
+    display: none;
+  }
+
+  #display {
+    width: 95%;
+    font-size: 30px;
+  }
+
+  .buttons button {
+    font-size: 25px;
+    padding: 10px;
+  }
+
+  .inputs input {
+    width: 90%;
+  }
+}
+
+/* ===================================================================
+Eid - باقي على عيد الأضحى
+====================================================================== */
+#Eid {
 }

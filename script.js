@@ -19,8 +19,15 @@ document.addEventListener("click", function (e) {
 
 function calculer() {
   const subjects = [
-    "arabic", "islamic", "hisgeo", "english", "french",
-    "math", "physic", "svt", "philosophy",
+    "arabic",
+    "islamic",
+    "hisgeo",
+    "english",
+    "french",
+    "math",
+    "physic",
+    "svt",
+    "philosophy",
   ];
 
   let sum = 0;
@@ -29,7 +36,7 @@ function calculer() {
     if (!input) continue;
 
     const value = parseFloat(input.value);
-    
+
     if (isNaN(value)) {
       alert("الرجاء إدخال جميع النقاط");
       input.focus();
@@ -45,7 +52,7 @@ function calculer() {
 
   const average = sum / subjects.length;
   document.getElementById("average").value = average.toFixed(2);
-  
+
   const gradeElement = document.getElementById("grade");
   if (gradeElement) {
     let text = "";
@@ -73,141 +80,137 @@ function calculer() {
       bgColor = "gold";
     }
 
-    gradeElement.value = text;  
+    gradeElement.value = text;
     gradeElement.style.backgroundColor = bgColor;
     gradeElement.style.color = textColor;
   }
 }
 
-
-
 /* ======================================================
     Search input & button
     =================================================== */
 function executeSearch() {
-    const inputField = document.getElementById('searchInput');
-    const query = inputField.value.toLowerCase().trim();
-    
-    // مصفوفة البيانات مع إضافة "وصف قصير" لكل مقال
-    const articles = [
-        { 
-            keywords: ["html", "إتش تي إم إل", "اتش تي ام ال"], 
-            title: "تعرف على html", 
-            url: "https://mahmoudderraz26.github.io/programming/html/html1.html",
-            description: "ابدأ بتعلم html من الألف إلى الياء"
-        },
-        { 
-            keywords: ["css", "ccs", "csc", "تنسيق", "سي اس اس", "سي إس إس"], 
-            title: "أساسيات CSS", 
-            url: "css-basics.html",
-            description: "ابدأ بتعلم css من الألف إلى الياء"
-        },
-        { 
-            keywords: ["javascript", "javascribt", "js", "جافاسكريبت", "جافا سكريبت"], 
-            title: "تعلم الجافاسكريبت", 
-            url: "js-course.html",
-            description: "ابدأ رحلتك في البرمجة الحقيقية وتعلم كيفية إضافة التفاعل لموقعك باستخدام JavaScript..."
-        }
-    ];
+  const inputField = document.getElementById("searchInput");
+  const query = inputField.value.toLowerCase().trim();
 
-    // الحالة الأولى: الحقل فارغ
-    if (query === "") {
-        inputField.value = ""; // مسح أي مسافات
-        inputField.placeholder = "عذرا ! يرجى إدخال كلمة للبحث.";
-        inputField.classList.add("error-placeholder"); // اختيارياً لإضافة لون أحمر
-        return;
-    }
+  // مصفوفة البيانات مع إضافة "وصف قصير" لكل مقال
+  const articles = [
+    {
+      keywords: ["html", "إتش تي إم إل", "اتش تي ام ال"],
+      title: "تعرف على html",
+      url: "https://mahmoudderraz26.github.io/programming/html/html1.html",
+      description: "ابدأ بتعلم html من الألف إلى الياء",
+    },
+    {
+      keywords: ["css", "ccs", "csc", "تنسيق", "سي اس اس", "سي إس إس"],
+      title: "أساسيات CSS",
+      url: "css-basics.html",
+      description: "ابدأ بتعلم css من الألف إلى الياء",
+    },
+    {
+      keywords: ["javascript", "javascribt", "js", "جافاسكريبت", "جافا سكريبت"],
+      title: "تعلم الجافاسكريبت",
+      url: "js-course.html",
+      description:
+        "ابدأ رحلتك في البرمجة الحقيقية وتعلم كيفية إضافة التفاعل لموقعك باستخدام JavaScript...",
+    },
+  ];
 
-    // البحث عن جميع النتائج المطابقة (وليس نتيجة واحدة فقط)
-    const results = articles.filter(article => 
-        article.keywords.some(keyword => keyword.includes(query)) || 
-        article.title.toLowerCase().includes(query)
-    );
+  // الحالة الأولى: الحقل فارغ
+  if (query === "") {
+    inputField.value = ""; // مسح أي مسافات
+    inputField.placeholder = "عذرا ! يرجى إدخال كلمة للبحث.";
+    inputField.classList.add("error-placeholder"); // اختيارياً لإضافة لون أحمر
+    return;
+  }
 
-    // الحالة الثانية: لا توجد نتائج
-    if (results.length === 0) {
-        inputField.value = "";
-        inputField.placeholder = "عذرا ! لا يوجد محتوى عن " + query + "، جرب البحث بكلمات أخرى";
-        return;
-    }
+  // البحث عن جميع النتائج المطابقة (وليس نتيجة واحدة فقط)
+  const results = articles.filter(
+    (article) =>
+      article.keywords.some((keyword) => keyword.includes(query)) ||
+      article.title.toLowerCase().includes(query),
+  );
 
-    // الحالة الثالثة: وجود نتائج - تخزينها في الذاكرة المؤقتة والذهاب لصفحة النتائج
-    // سنستخدم localStorage لنقل البيانات لصفحة النتائج
-    localStorage.setItem('searchQuery', query);
-    localStorage.setItem('searchResults', JSON.stringify(results));
-    
-    // التوجيه لصفحة نتائج البحث
-    window.location.href = "https://mahmoudderraz26.github.io/programming/html/html1.html";
+  // الحالة الثانية: لا توجد نتائج
+  if (results.length === 0) {
+    inputField.value = "";
+    inputField.placeholder =
+      "عذرا ! لا يوجد محتوى عن " + query + "، جرب البحث بكلمات أخرى";
+    return;
+  }
+
+  // الحالة الثالثة: وجود نتائج - تخزينها في الذاكرة المؤقتة والذهاب لصفحة النتائج
+  // سنستخدم localStorage لنقل البيانات لصفحة النتائج
+  localStorage.setItem("searchQuery", query);
+  localStorage.setItem("searchResults", JSON.stringify(results));
+
+  // التوجيه لصفحة نتائج البحث
+  window.location.href =
+    "https://mahmoudderraz26.github.io/programming/html/html1.html";
 }
-
-
-
-
 
 /* ======================================================
     quiz
     =================================================== */
 function checkAnswers() {
-    // 1. تعريف الإجابات الصحيحة بناءً على الـ value الموجودة في الـ HTML
-    const correctAnswers = {
-        question1: "Hyper Text Markup Language",
-        question2: "br",
-        question3: "target-blank",
-        question4: "ol",
-        question5: "body {color: black;}",
-        question6: "color",
-        question7: "font-size",
-        question8: "no",
-        question9: "firstAnswerOfQ9",
-        question10: "equal",
-    };
+  const correctAnswers = {
+    question1: "Hyper Text Markup Language",
+    question2: "br",
+    question3: "target-blank",
+    question4: "ol",
+    question5: "body {color: black;}",
+    question6: "color",
+    question7: "font-size",
+    question8: "no",
+    question9: "firstAnswerOfQ9",
+    question10: "equal",
+  };
 
-    let score = 0;
-    const totalQuestions = 10;
-    const pointsPerAnswer = 2;
+  let score = 0;
+  const totalQuestions = 10;
+  const pointsPerAnswer = 2;
 
-    // 2. الحصول على جميع بيانات النموذج
-    const form = document.getElementById('quizForm');
-    const formData = new FormData(form);
+  // 2. الحصول على جميع بيانات النموذج
+  const form = document.getElementById("quizForm");
+  const formData = new FormData(form);
 
-    // 3. حلقة تكرارية للتحقق من الإجابات
-    for (let i = 1; i <= totalQuestions; i++) {
-        const questionName = "question" + i;
-        const userAnswer = formData.get(questionName);
+  // 3. حلقة تكرارية للتحقق من الإجابات
+  for (let i = 1; i <= totalQuestions; i++) {
+    const questionName = "question" + i;
+    const userAnswer = formData.get(questionName);
 
-        if (userAnswer === correctAnswers[questionName]) {
-            score += pointsPerAnswer;
-        }
+    if (userAnswer === correctAnswers[questionName]) {
+      score += pointsPerAnswer;
     }
+  }
 
-    // 4. عرض النتيجة في الحقل المخصص
-    const resultField = document.getElementById('quizResult');
-    resultField.value = "نتيجتك هي: " + score + " من " + (totalQuestions * pointsPerAnswer);
-    
-    if (score >= 12) {
-        resultField.style.color = "green";
-    } else {
-        resultField.style.color = "red";
-    }
+  // 4. عرض النتيجة في الحقل المخصص
+  const resultField = document.getElementById("quizResult");
+  resultField.value =
+    "نتيجتك هي: " + score + " من " + totalQuestions * pointsPerAnswer;
+
+  if (score >= 12) {
+    resultField.style.color = "green";
+  } else {
+    resultField.style.color = "red";
+  }
 }
-
-
 
 /* ======================================================
     Calculator Script
     =================================================== */
 
-    const display = document.getElementById("display");
+const display = document.getElementById("display");
 
 function appendToDisplay(input) {
-  if(!display) return;
-  
+  if (!display) return;
+
   const lastChar = display.value.slice(-1);
   const operators = ["+", "-", "*", "/"];
 
   // 1. منع البدء بعملية حسابية (ما عدا علامة الناقص للأرقام السالبة)
   if (display.value === "" && ["+", "*", "/"].includes(input)) {
-      return; 
+    return;
   }
 
   // 2. منع تكرار العمليات الحسابية المتتالية
@@ -219,26 +222,26 @@ function appendToDisplay(input) {
 }
 
 function clearDisplay() {
-  if(display) display.value = "";
+  if (display) display.value = "";
 }
 
 function deleteLast() {
-  if(display) display.value = display.value.slice(0, -1);
+  if (display) display.value = display.value.slice(0, -1);
 }
 
 function calculate() {
-  if(!display || display.value === "") return;
+  if (!display || display.value === "") return;
 
   try {
     // الأمان: استخدام new Function بدلاً من eval
     // هذا يعزل الكود المنفذ ويمنع الوصول للمتغيرات المحلية
-    const result = new Function('return ' + display.value)();
-    
+    const result = new Function("return " + display.value)();
+
     // التأكد من أن النتيجة رقم مقبول
     if (result === Infinity || isNaN(result)) {
-        display.value = "Error";
+      display.value = "Error";
     } else {
-        display.value = result;
+      display.value = result;
     }
   } catch (error) {
     display.value = "Error";
@@ -246,3 +249,33 @@ function calculate() {
     setTimeout(clearDisplay, 1500);
   }
 }
+
+/* ======================================================
+    Eid Timer - باقي على عيد الأضحى
+    =================================================== */
+function updateCountdown() {
+  const eidDate = new Date("May 27, 2026 00:00:00").getTime();
+
+  const now = new Date().getTime();
+
+  const diff = eidDate - now;
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  document.getElementById("stillDay").textContent = days;
+  document.getElementById("stillHour").textContent = hours;
+  document.getElementById("stillMin").textContent = minutes;
+  document.getElementById("stillSec").textContent = seconds;
+
+  if (diff < 0) {
+    clearInterval(timer);
+    document.getElementById("EidTable").innerHTML = "<h3>عيد مبارك سعيد!</h3>";
+  }
+}
+
+const timer = setInterval(updateCountdown, 1000);
+
+updateCountdown();
